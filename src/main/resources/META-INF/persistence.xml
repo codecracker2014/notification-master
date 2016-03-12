@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="PersistenceUnitAdmin">
+	<class>com.nucleus.models.DemoEntity</class>
+	<properties>  
+	<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+	<property name="hibernate.multiTenancy" value="SCHEMA" />
+	 <property name="hibernate.tenant_identifier_resolver" value="com.nucleus.multitenancy.SchemaResolverAdmin" />
+	 <!-- <property name="hibernate.connection.provider_class" value="org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl" /> --> 
+	<property name="hibernate.multi_tenant_connection_provider" value="com.nucleus.multitenancy.MultiTCProvider"/>
+	</properties>
+	
+	</persistence-unit>
+
+</persistence>
