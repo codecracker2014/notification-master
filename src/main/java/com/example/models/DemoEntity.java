@@ -1,4 +1,4 @@
-package com.nucleus.models;
+package com.example.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

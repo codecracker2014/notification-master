@@ -1,31 +1,24 @@
-package com.nucleus.multitenancy;
+package com.example.multitenanty;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
 
 import org.apache.commons.dbcp.BasicDataSource;
-import org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 
-public class MyConnectionProvider implements ConnectionProvider{
+public class ConnectionProviderImpl implements ConnectionProvider{
 
-	private final BasicDataSource basicDataSource=new BasicDataSource();
-
-	public MyConnectionProvider(String database)
+	private final BasicDataSource basicDataSource=new BasicDataSource(); 
+	
+	public ConnectionProviderImpl(String schema)
 	{
 		  basicDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		  basicDataSource.setUrl("jdbc:mysql://localhost:3306/"+database);
+		  basicDataSource.setUrl("jdbc:mysql://localhost:3306/"+schema);
 		  basicDataSource.setUsername("root");
 		  basicDataSource.setPassword("gk");
 		  basicDataSource.setInitialSize(2);
-		  //basicDataSource.setMaxTotal(10);
-
-		
+		  
 	}
-
 	@Override
 	public boolean isUnwrappableAs(Class arg0) {
 		// TODO Auto-generated method stub

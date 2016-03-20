@@ -8,10 +8,10 @@
 	<class>com.nucleus.models.DemoEntity</class>
 	<properties>  
 	<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
-	<property name="hibernate.multiTenancy" value="SCHEMA" />
-	 <property name="hibernate.tenant_identifier_resolver" value="com.nucleus.multitenancy.SchemaResolverAdmin" />
-	 <!-- <property name="hibernate.connection.provider_class" value="org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl" /> --> 
-	<property name="hibernate.multi_tenant_connection_provider" value="com.nucleus.multitenancy.MultiTCProvider"/>
+	<property name="show_sql" value="true" />
+	 <property name="hibernate.multiTenancy" value="DATABASE" />
+	 <property name="hibernate.tenant_identifier_resolver" value="com.example.multitenanty.MyCurrentTenantIdentifierResolver" /> 
+	<property name="hibernate.multi_tenant_connection_provider" value="com.example.multitenanty.MultiTenancyConnectionProvider"/>
 	</properties>
 	
 	</persistence-unit>
