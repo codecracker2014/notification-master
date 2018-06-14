@@ -2,3 +2,9 @@ http://www.tomas-dvorak.cz/posts/jpa-multitenancy/
 http://codecrafters.blogspot.in/2013/03/multi-tenant-cloud-applications-with.html
 http://stackoverflow.com/questions/3731016/multiple-entity-manager-issue-in-spring-when-using-more-than-one-datasource/6796136#6796136
 http://stackoverflow.com/questions/9717928/multitenancy-with-spring-jpa
+
+MAVEN_OPTS
+
+-Xmx1G -XX:MaxPermSize=1G -Djavax.xml.parsers.DocumentBuilderFactory=com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl -Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl -Dspring.profiles.active=ldap,DBBasedStorage,customization -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=7004,server=y,suspend=n
+path
+%M2%;D:\apache-maven-3.1.1\;D:\apache-maven-3.1.1\bin;
